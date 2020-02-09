@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
+<v-app>
+    <v-content>
+      <router-view />  
+    </v-content>
+  </v-app>
+
+  <!-- <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Login source="je"/>
-  </div>
+    <Login v-if="!isLoggedIn" />
+    <Home v-else />
+  </div> -->
 </template>
 
 <script>
-import Login from './components/Login.vue'
 
 export default {
   name: 'App',
-  components: {
-    Login
-  }
+  // app initial state  
+    data: () => {  
+      return {  
+        currentRoute: window.location.pathname,
+      }  
+    },
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lobster,Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
