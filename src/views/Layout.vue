@@ -69,7 +69,7 @@ export default {
 </script>  
 
 <style scoped>
-v-content{
+.container{
         height:100%;
 }
 </style>
